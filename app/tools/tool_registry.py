@@ -1,5 +1,6 @@
 
 from app.tools.search_tool import WebSearchTool
+from app.tools.datetime_tool import DateTimeTool
 
 
 class ToolRegistry:
@@ -7,10 +8,15 @@ class ToolRegistry:
     Maintains all tools available to the AI agent.
     """
 
-    def __init__(self, search_tool: WebSearchTool):
+    def __init__(
+        self,
+        search_tool: WebSearchTool,
+        datetime_tool: DateTimeTool
+    ):
 
         self.tools = {
-            "search_web": search_tool.search_web
+            "search_web": search_tool.search_web,
+            "get_current_datetime": datetime_tool.get_current_datetime
         }
 
     def get_tool(self, tool_name: str):
