@@ -173,6 +173,10 @@ Activate the environment.
 source .venv/bin/activate
 ```
 
+Note: If you get any errror Runnning script add this command and try again the activate command
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
 ### Step 3: Install Dependencies
 
 ```bash
